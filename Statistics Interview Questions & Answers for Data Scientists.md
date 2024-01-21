@@ -232,6 +232,36 @@ Used to compare means of different samples from the same group.
 
 Answer:
 
+Lets say you have two subsets of a dataset with known means ($μ_1$, $μ_2$) and standard deviation ($σ_1$,$σ_2$), you can calculate the blended mean $(μ_{total})$ and standard deviation $(σ_{total})$ of the combined dataset as follows:
+
+Blended Mean $(μ_{total})$:
+
+$$
+\mu_{\text{total}} = \frac{N_1 \cdot \mu_1 + N_2 \cdot \mu_2}{N_1 + N_2}
+$$
+
+Blended Standard Deviation $(σ_{total})$:
+
+$$\sigma_{\text{total}} = \sqrt{\frac{N_1 \cdot (\sigma_1^2 + (\mu_1 - \mu_{\text{total}})^2) + N_2 \cdot (\sigma_2^2 + (\mu_2 - \mu_{\text{total}})^2)}{N_1 + N_2}}
+$$
+
+Here, $N_1$ and $N_2$ are the sizes of the respective subsets.
+
+If you have K subsets with means $μ_1​,μ_2​,...,μ_K$ and standard deviations $σ_1​,σ_2​,...,σ_K$, you can extend the formulas to calculate the blended mean and standard deviation for the total dataset:
+
+Blended Mean $(μ_{total})$:
+
+$$
+\mu_{\text{total}} = \frac{\sum_{i=1}^{K} N_i \cdot \mu_i}{\sum_{i=1}^{K} N_i}
+$$
+
+Blended Standard Deviation $(σ_{total})$:
+
+$$
+\sigma_{\text{total}} = \sqrt{\frac{\sum_{i=1}^{K} N_i \cdot (\sigma_i^2 + (\mu_i - \mu_{\text{total}})^2)}{\sum_{i=1}^{K} N_i}}
+$$
+
+Here, $N_i$ represents the size of the ith subset. These formulas are based on the weighted average of means and variances.
 
 ### Q15: What is the relationship between the significance level and the confidence level in Statistics?###
 
